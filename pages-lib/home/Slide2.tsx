@@ -6,7 +6,7 @@ type Props = {
 }
 export default function Slide1({x, p}:Props) {
   return <Wrapper>
-    <h1>Slide 2</h1>
+    <h1>Slide 2 (x={x})</h1>
     <Ball x={x} />
   </Wrapper>
 }
@@ -27,7 +27,7 @@ const Ball = styled.div<BallProps>`
   background-color: rgba(255,255, 0, 0.5);
   border-radius: 50%;
   left: 200px;
-  /* transform: translateX(${({x})=> `${x*2}px`}); */
+  transform: translateX(${({x})=> `${x*2}px`});
   z-index: 10;
   /* top: 300px; */
 `

@@ -37,6 +37,14 @@ const Home: React.FC = () => {
     window.location.href = `#${p-1}`
   }
 
+  const getRelativeX = function() {
+    const elem = container.current as HTMLElement | null
+    if (elem) {
+      return x - (elem.clientWidth * (p-1))
+    }
+    return 0;
+  }
+
   return (
     <Container ref={container}>
       <Controls>
@@ -48,7 +56,7 @@ const Home: React.FC = () => {
         <Slide1 x={x} p={p}/>
       </Segment>
       <Segment id="2">
-        <Slide2 x={x} p={p}/>
+        <Slide2 x={getRelativeX()} p={p}/>
       </Segment>
       <Segment id="3">
         <h2>3</h2>
