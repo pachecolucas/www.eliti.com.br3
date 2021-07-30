@@ -12,8 +12,10 @@ export default function Slide1({x, p}:Props) {
 }
 
 const Wrapper = styled.div`
-  border: 10px solid blue;
+  border: 10px solid black;
   width: 100%;
+  overflow: hidden;
+  position: relative;
 `
 
 interface BallProps {

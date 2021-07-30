@@ -5,6 +5,9 @@ import Slide1 from 'pages-lib/home/Slide1'
 import Slide2 from 'pages-lib/home/Slide2'
 import Slide3 from 'pages-lib/home/Slide3'
 import Slide4 from 'pages-lib/home/Slide4'
+import Slide5 from 'pages-lib/home/Slide5'
+
+const NUM_PAGES = 4;
 
 const Home: React.FC = () => {
   
@@ -16,7 +19,7 @@ const Home: React.FC = () => {
   const handleScroll = () => {
     const elem = container.current as HTMLElement | null
     if (elem) {
-      console.log("handleScroll...", elem, container, elem.clientWidth)
+      console.log("handleScroll...", elem.scrollLeft)
       setX(elem.scrollLeft)
       setP(Math.round(elem.scrollLeft/elem.clientWidth)+1)
     }
@@ -52,7 +55,7 @@ const Home: React.FC = () => {
       <Controls>
         {p > 1 && <button onClick={prev}>PREV</button>}
         <button>{p} ({x})</button>
-        {p < 5 && <button onClick={next}>NEXT</button>}
+        {p < NUM_PAGES && <button onClick={next}>NEXT</button>}
       </Controls>
       <Segment id="1">
         <Slide1 x={getRelativeX(1)} p={p}/>
@@ -67,7 +70,7 @@ const Home: React.FC = () => {
         <Slide4 x={getRelativeX(4)} p={p}/>
       </Segment>
       <Segment id="5">
-        <h2>5</h2>
+        <Slide5 x={getRelativeX(5)} p={p}/>
       </Segment>
     </Container>
   )
@@ -96,11 +99,10 @@ const Controls = styled.div`
 `
 
 const Segment = styled.div`
-  border: 5px solid green;
+  border: 50px solid green;
 	height: 100%;
 	scroll-snap-align: center;
 	display: flex;
 	background-color: darkorchid;
 	flex: 0 0 100%;
-  position: relative;
 `
