@@ -30,5 +30,5 @@ const Ball = styled.div<BallProps>`
   left: 200px;
   transform: translateX(${({x})=> `${x*2}px`});
   z-index: 10;
-  /* top: 300px; */
+  top: 40%;
 `
