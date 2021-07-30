@@ -4,9 +4,9 @@ type Props = {
   x: number
   p: number
 }
-export default function Slide2({x, p}:Props) {
+export default function Slide4({x, p}:Props) {
   return <Wrapper>
-    <h1>Slide 2/{p} x={x}</h1>
+    <h1>Slide 4/{p} x={x}</h1>
     <Ball x={x} />
   </Wrapper>
 }
@@ -24,7 +24,7 @@ const Ball = styled.div<BallProps>`
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: rgba(255,255, 0, 0.5);
+  background-color: rgba(0,0, 255, 0.5);
   border-radius: 50%;
   left: 200px;
   transform: translateX(${({x})=> `${x*2}px`});

@@ -6,7 +6,7 @@ type Props = {
 }
 export default function Slide1({x, p}:Props) {
   return <Wrapper>
-    <h1>Slide 1</h1>
+    <h1>Slide 1/{p} x={x}</h1>
     <Ball x={x} />
   </Wrapper>
 }

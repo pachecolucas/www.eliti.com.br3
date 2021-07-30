@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Slide1 from 'pages-lib/home/Slide1'
 import Slide2 from 'pages-lib/home/Slide2'
+import Slide3 from 'pages-lib/home/Slide3'
+import Slide4 from 'pages-lib/home/Slide4'
 
 const Home: React.FC = () => {
   
@@ -16,7 +18,7 @@ const Home: React.FC = () => {
     if (elem) {
       console.log("handleScroll...", elem, container, elem.clientWidth)
       setX(elem.scrollLeft)
-      setP(Math.round(elem.scrollLeft/elem.clientWidth+1))
+      setP(Math.round(elem.scrollLeft/elem.clientWidth)+1)
     }
   }
 
@@ -37,10 +39,10 @@ const Home: React.FC = () => {
     window.location.href = `#${p-1}`
   }
 
-  const getRelativeX = function() {
+  const getRelativeX = function(page:number) {
     const elem = container.current as HTMLElement | null
     if (elem) {
-      return x - (elem.clientWidth * (p-1))
+      return x - (elem.clientWidth * (page-1))
     }
     return 0;
   }
@@ -53,16 +55,16 @@ const Home: React.FC = () => {
         {p < 5 && <button onClick={next}>NEXT</button>}
       </Controls>
       <Segment id="1">
-        <Slide1 x={x} p={p}/>
+        <Slide1 x={getRelativeX(1)} p={p}/>
       </Segment>
       <Segment id="2">
-        <Slide2 x={getRelativeX()} p={p}/>
+        <Slide2 x={getRelativeX(2)} p={p}/>
       </Segment>
       <Segment id="3">
-        <h2>3</h2>
+        <Slide3 x={getRelativeX(3)} p={p}/>
       </Segment>
       <Segment id="4">
-        <h2>4</h2>
+        <Slide4 x={getRelativeX(4)} p={p}/>
       </Segment>
       <Segment id="5">
         <h2>5</h2>
