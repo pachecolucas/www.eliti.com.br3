@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import styled from 'styled-components'
+import Slide1 from 'pages-lib/home/Slide1'
+import Slide2 from 'pages-lib/home/Slide2'
 
 const Home: React.FC = () => {
   
@@ -39,17 +41,14 @@ const Home: React.FC = () => {
     <Container ref={container}>
       <Controls>
         {p > 1 && <button onClick={prev}>PREV</button>}
-        <button>{p}</button>
+        <button>{p} ({x})</button>
         {p < 5 && <button onClick={next}>NEXT</button>}
       </Controls>
       <Segment id="1">
-        <X>{x}</X>
-        <Ball x={x} />
-        <Square />
+        <Slide1 x={x} p={p}/>
       </Segment>
       <Segment id="2">
-        <h2>2</h2>
-        <section>TESTE</section>
+        <Slide2 x={x} p={p}/>
       </Segment>
       <Segment id="3">
         <h2>3</h2>
@@ -75,7 +74,7 @@ const Container = styled.div`
   background-color: oldlace;
   display: flex;
   border: 10px solid red;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; // Safari ainda não tem isso >\
 `
 
 const Controls = styled.div`
@@ -86,15 +85,6 @@ const Controls = styled.div`
   transform: translateX(-50%);
 `
 
-const X = styled.div`
-  position: fixed;
-  left: 50%;
-  top: 0;
-  background: white;
-  color: black;
-  z-index: 20;
-`
-
 const Segment = styled.div`
   border: 5px solid green;
 	height: 100%;
@@ -103,25 +93,4 @@ const Segment = styled.div`
 	background-color: darkorchid;
 	flex: 0 0 100%;
   position: relative;
-`
-
-interface BallProps {
-  x: number
-}
-const Ball = styled.div<BallProps>`
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255,255, 255, 0.2);
-  border-radius: 50%;
-  left: 200px;
-  transform: translateX(${({x})=> `${x*2}px`});
-  z-index: 10;
-  /* top: 300px; */
-`
-
-const Square = styled.div`
-  width: 100px;
-  height: 100px;
-  background: red;
 `
