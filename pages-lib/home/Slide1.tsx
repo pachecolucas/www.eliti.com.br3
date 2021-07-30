@@ -18,7 +18,7 @@ export default function Slide1({x, p}:Props) {
 }
 
 const Wrapper = styled.div`
-  border: 10px solid black;
+  border: 1px solid black;
   width: 100%;
   overflow: hidden;
   position: relative;

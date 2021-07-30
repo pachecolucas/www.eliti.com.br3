@@ -86,7 +86,7 @@ const Container = styled.div`
   color: white;
   background-color: oldlace;
   display: flex;
-  border: 10px solid red;
+  border: 1px solid yellow;
   scroll-behavior: smooth; // Safari ainda não tem isso >\
 `
 
@@ -99,7 +99,7 @@ const Controls = styled.div`
 `
 
 const Segment = styled.div`
-  border: 50px solid green;
+  border: 1px solid green;
 	height: 100%;
 	scroll-snap-align: center;
 	display: flex;
