@@ -79,14 +79,12 @@ const Home: React.FC = () => {
 export default Home
 
 const Container = styled.div`
+  /* border: 1px solid yellow; */
 	width: 100vw;
 	height: 100vh;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
-  color: white;
-  background-color: oldlace;
   display: flex;
-  border: 1px solid yellow;
   scroll-behavior: smooth; // Safari ainda não tem isso >\
 `
 
@@ -99,10 +97,9 @@ const Controls = styled.div`
 `
 
 const Segment = styled.div`
-  border: 1px solid green;
+  /* border: 1px solid green; */
 	height: 100%;
 	scroll-snap-align: center;
 	display: flex;
-	background-color: darkorchid;
 	flex: 0 0 100%;
 `
