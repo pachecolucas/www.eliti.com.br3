@@ -5,6 +5,8 @@ Novo web-site da [Eliti](http://eliti.com.br) em estilo de Story Telling
 
 ## Conteúdo/Slides
 
+0. EDUCAR NÃO É COLOCAR CONTEÚDO NA CABEÇA
+
 1. CADA PARTE DO CORPO TEM SEU SIGNIFICADO
     - TERRA, ÁGUA, AR, FOGO
     - FÍSICO, EMOCIONAL, MENTAL, ESPIRITUAL
