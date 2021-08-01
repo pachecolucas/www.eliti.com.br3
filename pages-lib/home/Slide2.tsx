@@ -21,10 +21,11 @@ export default function Slide2({x, p}:Props) {
 }
 
 function getBodyX(props: ParallaxProps) {
-  if (props.p <= 2) {
-    return props.x*props.v;
+  const result = props.x * props.v
+  if (result <= 0) {
+    return props.x * .5
   }
-  return props.x * .5;
+  return result;
 }
 
 const Body = styled.div<ParallaxProps>`
