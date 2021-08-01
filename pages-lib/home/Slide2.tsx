@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Image from 'next/image'
-
+import Wrapper from 'pages-lib/home/Wrapper'
 import {ParallaxProps} from 'types'
 
 type Props = {
@@ -8,27 +8,27 @@ type Props = {
   p: number
 }
 export default function Slide2({x, p}:Props) {
-  return <Wrapper>
+  return <Wrapper overflow={'visible'}>
     <h1>Cada parte do corpo tem seu significado</h1>
-    <Jump x={x} v={-0.5}>
+    <Body p={p} x={x} v={-0.5}>
       <Image src='/assets/img/jump.gif' width={1000} height={830} />
-      <Circle1 x={x} v={2}/>
-      <Circle3 x={x} v={-2}/>
-      <Circle2 x={x} v={2}/>
-      <Circle4 x={x} v={-2}/>
-    </Jump>
+      <Circle1 p={p} x={x} v={.9}/>
+      <Circle3 p={p} x={x} v={-.9}/>
+      <Circle2 p={p} x={x} v={.9}/>
+      <Circle4 p={p} x={x} v={-.9}/>
+    </Body>
   </Wrapper>
 }
 
-const Wrapper = styled.div`
-  border: 1px solid white;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-`
+function getBodyX(props: ParallaxProps) {
+  if (props.p <= 2) {
+    return props.x*props.v;
+  }
+  return props.x * .5;
+}
 
-const Jump = styled.div<ParallaxProps>`
-  transform: translateX(${({x, v})=> `${x*v}px`});
+const Body = styled.div<ParallaxProps>`
+  transform: translateX(${(props)=> `${getBodyX(props)}px`});
   position: absolute;
   top: 20%;
 `

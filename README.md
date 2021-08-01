@@ -28,7 +28,7 @@ Novo web-site da [Eliti](http://eliti.com.br) em estilo de Story Telling
     - SENTIDO
     - PREPARO
     - AMOR
-    - ÉTICA
+    - PROSPERIDADE
 
 ## Inspirações:
 <http://futureofcarsharing.com>

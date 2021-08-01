@@ -1,22 +1,16 @@
 import styled from "styled-components"
+import Wrapper from 'pages-lib/home/Wrapper'
 
 type Props = {
   x: number
   p: number
 }
 export default function Slide5({x, p}:Props) {
-  return <Wrapper>
+  return <Wrapper overflow={'visible'}>
     <h1>E colhemos:</h1>
     <Ball x={x} />
   </Wrapper>
 }
-
-const Wrapper = styled.div`
-  border: 1px solid black;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-`
 
 interface BallProps {
   x: number
