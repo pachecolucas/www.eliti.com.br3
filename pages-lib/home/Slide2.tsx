@@ -9,7 +9,7 @@ type Props = {
 }
 export default function Slide2({x, p}:Props) {
   return <Wrapper overflow={'visible'}>
-    <h1>Cada parte do corpo tem seu significado</h1>
+    <h1>Cada parte do<br />corpo tem seu<br />significado</h1>
     <Body p={p} x={x} v={-0.5}>
       <Image src='/assets/img/jump.gif' width={1000} height={830} />
       <Circle1 p={p} x={x} v={.9}/>
@@ -31,7 +31,7 @@ function getBodyX(props: ParallaxProps) {
 const Body = styled.div<ParallaxProps>`
   transform: translateX(${(props)=> `${getBodyX(props)}px`});
   position: absolute;
-  top: 20%;
+  top: 30%;
 `
 
 const Circle = styled.div<ParallaxProps>`
@@ -42,13 +42,22 @@ const Circle = styled.div<ParallaxProps>`
   transform: translateX(${({x, v})=> `${x*v}px`});
   z-index: 10;
   border: 2px solid white;
+}
 `
 
 const Circle1 = styled(Circle)`
   background-color: black;
   left: 50%;
   top: 2%;
-  width: 25px;
+  width: 10px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  @keyframes example {
+    0% {width: 10px;}
+    50% {width: 80px;}
+    100% {width: 10px;}
+  }
 `
 
 const Circle3 = styled(Circle)`

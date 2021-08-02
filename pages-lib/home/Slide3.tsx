@@ -8,6 +8,6 @@ type Props = {
 }
 export default function Slide3({x, p}:Props) {
   return <Wrapper overflow={'visible'}>
-    <h1>Nosso método inclui todas elas</h1>
+    <h1>Nosso método<br />inclui todas<br />as partes</h1>
   </Wrapper>
 }
