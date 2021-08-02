@@ -54,7 +54,7 @@ const Home: React.FC = () => {
     <Container ref={container}>
       <Controls>
         {p > 1 && <button onClick={prev}>PREV</button>}
-        <button>{p} ({x})</button>
+        <button>{p}</button>
         {p < NUM_PAGES && <button onClick={next}>NEXT</button>}
       </Controls>
       <Segment id="1">
