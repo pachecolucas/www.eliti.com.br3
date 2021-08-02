@@ -11,9 +11,9 @@ export default function Slide4({x, p}:Props) {
     <h1>Por isso<br />plantamos:</h1>
     <Body p={p} x={x} v={-.5}>
       <img src='/assets/img/stand.svg' alt="body" />
-      <Line1 p={p} x={x} v={-.5} />
+      <Line1 p={p} x={x} v={-1} />
       <Line2 p={p} x={x} v={-.5} />
-      <Line3 p={p} x={x} v={-.5} />
+      <Line3 p={p} x={x} v={-.25} />
     </Body>
   </Wrapper>
 }
@@ -42,11 +42,11 @@ const Line = styled.div<ParallaxProps>`
   height: .3rem;
   background: black;
   position: absolute;
-  left: 0%;
+  left: -30%;
   transform: translateX(${({x, v})=> {
     const result = x * v;
     if (result <= 0) {
-      return `${x*0.5}px`
+      return `${x*1}px`
     }
     return `${x*v}px`
   }});
