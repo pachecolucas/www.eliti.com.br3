@@ -17,7 +17,6 @@ export default function Slide1({x, p}:Props) {
     <Text p={p} x={x} v={-.2}>Se quiser entender porque nossos estudantes são tão auto-motivados e aprendem rapidamente assuntos computacionais complexos lembre-se de que a mágica está em algo que pode parecer complexo de se falar mas que revela-se simples na prática: uma revolucionária visão ontológica e epistemológica.</Text>
     {/* <Text x={x} v={.4}>Somos uma escola para a vida com um método e ensino original e moderno baseada no que existe de mais antigo: alquimia.</Text> */}
     <PauloFreire p={p} x={x} v={0.5}>
-      <Image src='/assets/img/bg1.gif' width={1018} height={589} />
       <Html p={p} x={x} v={-.1} src="/assets/img/stack/html.svg" alt="html" />
       <Css p={p} x={x} v={-.15} src="/assets/img/stack/css.svg" alt="css" />
       <Js p={p} x={x} v={-.2} src="/assets/img/stack/js.svg" alt="js" />
@@ -28,6 +27,7 @@ export default function Slide1({x, p}:Props) {
       <Mysql p={p} x={x} v={-.6} src="/assets/img/stack/mysql.svg" alt="Mysql" />
       <Php p={p} x={x} v={0} src="/assets/img/stack/php.svg" alt="Php" />
       <Netlify p={p} x={x} v={0} src="/assets/img/stack/netlify.svg" alt="Netlify" />
+      <Image src='/assets/img/bg1.gif' width={1018} height={589} />
     </PauloFreire>
   </Wrapper>
 }
