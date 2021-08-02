@@ -18,16 +18,16 @@ export default function Slide1({x, p}:Props) {
     {/* <Text x={x} v={.4}>Somos uma escola para a vida com um método e ensino original e moderno baseada no que existe de mais antigo: alquimia.</Text> */}
     <PauloFreire p={p} x={x} v={0.5}>
       <Image src='/assets/img/bg1.gif' width={1018} height={589} />
-      {/* <Html p={p} x={x} v={-.5} src="/assets/img/stack/html.svg" alt="html" />
-      <Css p={p} x={x} v={-1} src="/assets/img/stack/css.svg" alt="css" />
-      <Js p={p} x={x} v={-.5} src="/assets/img/stack/js.svg" alt="js" />
-      <Ts p={p} x={x} v={-1} src="/assets/img/stack/ts.svg" alt="ts" />
-      <React p={p} x={x} v={-.5} src="/assets/img/stack/react.svg" alt="react" />
-      <Github p={p} x={x} v={-1} src="/assets/img/stack/github.svg" alt="GitHub" />
-      <Next p={p} x={x} v={-1} src="/assets/img/stack/next.svg" alt="Next" />
-      <Mysql p={p} x={x} v={-1} src="/assets/img/stack/mysql.svg" alt="Mysql" />
-      <Php p={p} x={x} v={-.5} src="/assets/img/stack/php.svg" alt="Php" />
-      <Netlify p={p} x={x} v={-1} src="/assets/img/stack/netlify.svg" alt="Netlify" /> */}
+      <Html p={p} x={x} v={0} src="/assets/img/stack/html.svg" alt="html" />
+      <Css p={p} x={x} v={0} src="/assets/img/stack/css.svg" alt="css" />
+      <Js p={p} x={x} v={-.1} src="/assets/img/stack/js.svg" alt="js" />
+      <Ts p={p} x={x} v={-.3} src="/assets/img/stack/ts.svg" alt="ts" />
+      <React p={p} x={x} v={-.4} src="/assets/img/stack/react.svg" alt="react" />
+      <Github p={p} x={x} v={-.5} src="/assets/img/stack/github.svg" alt="GitHub" />
+      <Next p={p} x={x} v={0} src="/assets/img/stack/next.svg" alt="Next" />
+      <Mysql p={p} x={x} v={-.5} src="/assets/img/stack/mysql.svg" alt="Mysql" />
+      <Php p={p} x={x} v={0} src="/assets/img/stack/php.svg" alt="Php" />
+      <Netlify p={p} x={x} v={0} src="/assets/img/stack/netlify.svg" alt="Netlify" />
     </PauloFreire>
   </Wrapper>
 }
