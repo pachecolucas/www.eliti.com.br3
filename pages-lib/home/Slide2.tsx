@@ -50,16 +50,16 @@ const Circle = styled.div<ParallaxProps>`
   animation-duration: 2s;
   animation-iteration-count: infinite;
   cursor: pointer;
+  :hover {
+    opacity: 1;
+    animation: none;
+  }
   @keyframes example {
     0% { opacity: 1; }
     50% { opacity: .5; }
     100% { opacity: 1; }
   }
-  :hover {
-    opacity: 1;
-    animation: none;
-  }
-}`
+`
 
 const Circle1 = styled(Circle)`
   background: black;  
