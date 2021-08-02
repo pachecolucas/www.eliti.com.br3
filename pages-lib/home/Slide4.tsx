@@ -22,7 +22,7 @@ export default function Slide4({x, p}:Props) {
 const Body = styled.div<ParallaxProps>`
   position: absolute;
   width: 100%;
-  bottom: 0;
+  top: 20%;
   right: 0;
   transform: translateX(${({x, v})=> {
     const result = x * v;
