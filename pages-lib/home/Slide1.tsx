@@ -12,7 +12,7 @@ export default function Slide1({x, p}:Props) {
   return <Wrapper overflow={'visible'}>
     <Title p={p} x={x} v={-.4}>Educar não é<br />colocar conteúdo<br /> na cabeça</Title>
     <Text p={p} x={x} v={-.3}>Pessoas não são apenas uma cabeça. Somos um conjunto complexo de sistemas que devem ser orquestrados equilibradamente para atigir o máximo de realização.</Text>
-    <Text p={p} x={x} v={-.2}>Se quiser entender porque nossos estudantes são tão auto-motivados e aprendem rapidamente assuntos computacionais complexos lembre-se de que a mágica está na visão ontológica e epistemológica. Algo que pode parecer complexo de se falar e, ao mesmo tempo, torna-se muito simples ao ver sua aplicação prática.</Text>
+    <Text p={p} x={x} v={-.2}>Se quiser entender porque nossos estudantes são tão auto-motivados e aprendem rapidamente assuntos computacionais complexos lembre-se de que a mágica está na visão ontológica e epistemológica. Algo que pode parecer complexo de se falar mas que revela-se simples na prática.</Text>
     {/* <Text x={x} v={.4}>Somos uma escola para a vida com um método e ensino original e moderno baseada no que existe de mais antigo: alquimia.</Text> */}
     <PauloFreire p={p} x={x} v={0.5}>
       <Image src='/assets/img/bg1.gif' width={1018} height={589} />

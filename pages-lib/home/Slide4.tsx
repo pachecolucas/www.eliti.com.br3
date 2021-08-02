@@ -8,7 +8,7 @@ type Props = {
 }
 export default function Slide4({x, p}:Props) {
   return <Wrapper overflow={'visible'}>
-    <h1>Por isso plantamos:</h1>
+    <h1>Por isso<br />plantamos:</h1>
     <Body p={p} x={x} v={-.5}>
       <img src='/assets/img/stand.svg' alt="body" />
       <Line1 p={p} x={x} v={-.5} />

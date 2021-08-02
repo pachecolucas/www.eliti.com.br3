@@ -42,22 +42,27 @@ const Circle = styled.div<ParallaxProps>`
   transform: translateX(${({x, v})=> `${x*v}px`});
   z-index: 10;
   border: 2px solid white;
-}
-`
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+  @keyframes example {
+    0% { opacity: 1; }
+    50% { opacity: .5; }
+    100% { opacity: 1; }
+  }
+  :hover {
+    opacity: 1;
+    animation: none;
+  }
+}`
 
 const Circle1 = styled(Circle)`
   background-color: black;
   left: 50%;
   top: 2%;
-  width: 10px;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  @keyframes example {
-    0% {width: 10px;}
-    50% {width: 80px;}
-    100% {width: 10px;}
-  }
+  width: 25px;
+  animation-delay: .25s;
 `
 
 const Circle3 = styled(Circle)`
@@ -65,6 +70,7 @@ const Circle3 = styled(Circle)`
   left: 49%;
   top: 13%;
   width: 35px;
+  animation-delay: .5s;
 `
 
 const Circle2 = styled(Circle)`
@@ -72,6 +78,7 @@ const Circle2 = styled(Circle)`
   left: 46%;
   top: 28%;
   width: 55px;
+  animation-delay: .1s;
 `
 
 const Circle4 = styled(Circle)`
@@ -79,4 +86,5 @@ const Circle4 = styled(Circle)`
   left: 43%;
   top: 50%;
   width: 75px;
+  animation-delay: 1.25s;
 `
