@@ -51,6 +51,7 @@ const Img = styled.img<ParallaxProps>`
   top:0;
   left:0;
   transform: translateX(${({x, v})=> `${x*v}px`});
+  z-index: -1;
 `
 
 const Netlify = styled(Img)`
