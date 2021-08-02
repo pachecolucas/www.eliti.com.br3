@@ -19,7 +19,7 @@ export default function Slide1({x, p}:Props) {
     <PauloFreire p={p} x={x} v={0.5}>
       <Html p={p} x={x} v={.2} src="/assets/img/stack/html.svg" alt="html" />
       <Css p={p} x={x} v={.1} src="/assets/img/stack/css.svg" alt="css" />
-      <Js p={p} x={x} v={-.1} src="/assets/img/stack/js.svg" alt="js" />
+      <Js p={p} x={x} v={-.15} src="/assets/img/stack/js.svg" alt="js" />
       <Ts p={p} x={x} v={-.4} src="/assets/img/stack/ts.svg" alt="ts" />
       <React p={p} x={x} v={-.5} src="/assets/img/stack/react.svg" alt="react" />
       <Github p={p} x={x} v={-.6} src="/assets/img/stack/github.svg" alt="GitHub" />
